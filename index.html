@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Media | Scale Your Business with Meta Ads</title>
+    <meta name="description" content="Apex Media specializes in Facebook Marketing, Meta Ads, scaling businesses, and driving sales.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', /* slate-900 */
+                        secondary: '#1e293b', /* slate-800 */
+                        accent: '#3b82f6', /* blue-500 */
+                        neon: '#06b6d4', /* cyan-500 */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-primary text-slate-300 font-sans antialiased selection:bg-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent to-neon flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-accent/30">
+                        A
+                    </div>
+                    <span class="font-heading font-bold text-2xl text-white tracking-tight">Apex <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-neon">Media</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Home</a>
+                    <a href="#services" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Services</a>
+                    <a href="#about" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Why Us</a>
+                    <a href="#contact" class="px-6 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 text-white font-medium transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] backdrop-blur-sm">Get Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary border-t border-white/5 absolute w-full backdrop-blur-lg bg-secondary/95">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md mobile-link">Home</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md mobile-link">Services</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md mobile-link">Why Us</a>
+                <a href="#contact" class="block mt-4 px-3 py-3 text-center text-base font-medium text-white bg-accent rounded-md mobile-link">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-neon/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="text-center lg:text-left reveal-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6">
+                        <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+                        <span class="text-xs font-medium text-slate-300 tracking-wide uppercase">Top Digital Marketing Agency</span>
+                    </div>
+                    <h1 class="font-heading text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
+                        Scale Your Business With <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-neon to-accent bg-300% animate-gradient">Meta Ads</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        We are <strong class="text-white">Apex Media</strong>. We help businesses dominate their market, drive explosive sales, and scale efficiently through data-driven Facebook marketing.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="px-8 py-4 rounded-full bg-gradient-to-r from-accent to-neon text-white font-semibold text-lg transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] flex items-center justify-center gap-2 group">
+                            Start Scaling <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#services" class="px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-lg transition-all flex items-center justify-center backdrop-blur-sm">
+                            Explore Services
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center justify-center lg:justify-start gap-6 text-slate-500">
+                        <div class="flex items-center gap-2"><i class="fab fa-meta text-2xl text-blue-600"></i> <span class="font-medium text-sm">Meta Partner</span></div>
+                        <div class="w-px h-6 bg-white/10"></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-chart-line text-2xl text-green-500"></i> <span class="font-medium text-sm">ROI Focused</span></div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative lg:h-[600px] flex items-center justify-center reveal-right">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-accent/20 to-neon/20 rounded-3xl transform rotate-3 scale-105 filter blur-xl"></div>
+                    <img src="assets/images/hero_image_1776571588267.png" alt="Scaling Business with Digital Marketing" class="relative z-10 w-full h-auto max-h-[500px] object-cover rounded-3xl border border-white/10 shadow-2xl hero-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-secondary/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <h2 class="text-accent font-semibold tracking-wide uppercase text-sm mb-2">Our Expertise</h2>
+                <h3 class="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">What We Do Best</h3>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Comprehensive digital solutions designed to elevate your brand and multiply your revenue.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Service Card 1 -->
+                <div class="service-card group rounded-2xl bg-primary border border-white/5 overflow-hidden reveal-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img src="assets/images/service_fb_marketing_1776571639867.png" alt="Facebook Marketing" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 relative">
+                        <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent text-2xl mb-6 absolute -top-6 right-8 backdrop-blur-md border border-accent/30 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <h4 class="font-heading text-2xl font-bold text-white mb-3">Facebook Marketing</h4>
+                        <p class="text-slate-400 leading-relaxed">Engage your audience with compelling content and strategic brand positioning on the world's largest social network.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card group rounded-2xl bg-primary border border-white/5 overflow-hidden reveal-up delay-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img src="assets/images/service_meta_ads_1776571655938.png" alt="Meta Ads Mastery" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 relative">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 text-2xl mb-6 absolute -top-6 right-8 backdrop-blur-md border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4 class="font-heading text-2xl font-bold text-white mb-3">Meta Ads Mastery</h4>
+                        <p class="text-slate-400 leading-relaxed">Laser-targeted advertising campaigns across Facebook and Instagram designed to acquire high-quality leads at the lowest cost.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card group rounded-2xl bg-primary border border-white/5 overflow-hidden reveal-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img src="assets/images/service_scale_business_1776571672254.png" alt="Scale Business" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 relative">
+                        <div class="w-12 h-12 rounded-xl bg-neon/20 flex items-center justify-center text-neon text-2xl mb-6 absolute -top-6 right-8 backdrop-blur-md border border-neon/30 shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4 class="font-heading text-2xl font-bold text-white mb-3">Scale Your Business</h4>
+                        <p class="text-slate-400 leading-relaxed">We don't just run ads; we build growth engines. We analyze data and optimize funnels to ensure sustainable, scalable growth.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card group rounded-2xl bg-primary border border-white/5 overflow-hidden reveal-up delay-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img src="assets/images/service_sales_1776571693512.png" alt="Drive Sales" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 relative">
+                        <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 text-2xl mb-6 absolute -top-6 right-8 backdrop-blur-md border border-green-500/30 shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4 class="font-heading text-2xl font-bold text-white mb-3">Maximize Sales</h4>
+                        <p class="text-slate-400 leading-relaxed">Turn clicks into customers. Our strategies focus on the bottom line, optimizing conversion rates to maximize your Return on Ad Spend (ROAS).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="about" class="py-24 bg-primary relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <h2 class="text-accent font-semibold tracking-wide uppercase text-sm mb-2">Why Choose Apex Media</h2>
+                    <h3 class="font-heading text-4xl sm:text-5xl font-bold text-white mb-6">We Treat Your Business Like Our Own</h3>
+                    <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                        In a world of generic agencies, Apex Media stands out by delivering measurable results. We understand the Sri Lankan and global markets deeply.
+                    </p>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Our team of media buying experts continuously monitors, tests, and scales campaigns so you can focus on what you do best—running your business.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold text-lg">Data-Driven Decisions</h5>
+                                <p class="text-slate-500 text-sm">No guessing. Every strategy is backed by hard data and analytics.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold text-lg">Transparent Reporting</h5>
+                                <p class="text-slate-500 text-sm">Clear, honest communication about where your budget is going and the exact ROI.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold text-lg">Dedicated Account Managers</h5>
+                                <p class="text-slate-500 text-sm">You get a dedicated expert who understands your brand inside out.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4 reveal-right">
+                    <div class="space-y-4 pt-12">
+                        <div class="bg-secondary/80 p-6 rounded-2xl border border-white/5 text-center shadow-lg backdrop-blur-sm transform hover:-translate-y-2 transition-transform">
+                            <h4 class="text-4xl font-heading font-extrabold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent to-neon">100+</h4>
+                            <p class="text-slate-400 text-sm font-medium">Clients Scaled</p>
+                        </div>
+                        <div class="bg-secondary/80 p-6 rounded-2xl border border-white/5 text-center shadow-lg backdrop-blur-sm transform hover:-translate-y-2 transition-transform">
+                            <h4 class="text-4xl font-heading font-extrabold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent to-neon">5x</h4>
+                            <p class="text-slate-400 text-sm font-medium">Average ROAS</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-secondary/80 p-6 rounded-2xl border border-white/5 text-center shadow-lg backdrop-blur-sm transform hover:-translate-y-2 transition-transform">
+                            <h4 class="text-4xl font-heading font-extrabold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent to-neon">$1M+</h4>
+                            <p class="text-slate-400 text-sm font-medium">Ad Spend Managed</p>
+                        </div>
+                        <div class="bg-secondary/80 p-6 rounded-2xl border border-white/5 text-center shadow-lg backdrop-blur-sm transform hover:-translate-y-2 transition-transform">
+                            <h4 class="text-4xl font-heading font-extrabold text-white mb-2 text-transparent bg-clip-text bg-gradient-to-r from-accent to-neon">24/7</h4>
+                            <p class="text-slate-400 text-sm font-medium">Campaign Optimization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="py-24 bg-gradient-to-b from-primary to-secondary relative">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CgkJPGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz4KCTwvc3ZnPg==')] opacity-50"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal-up">
+            <h2 class="font-heading text-4xl sm:text-6xl font-extrabold text-white mb-6">Ready to Scale?</h2>
+            <p class="text-slate-400 text-lg sm:text-xl mb-10 max-w-2xl mx-auto">Stop leaving money on the table. Let Apex Media build a customized digital marketing strategy that converts clicks into cash.</p>
+            
+            <div class="bg-white/5 p-8 sm:p-12 rounded-3xl border border-white/10 backdrop-blur-xl shadow-2xl">
+                <form class="space-y-6 text-left">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                            <input type="text" class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                            <input type="email" class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Business Type / URL</label>
+                        <input type="text" class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors" placeholder="e.g. E-commerce / www.yoursite.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">How can we help?</label>
+                        <textarea rows="4" class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors" placeholder="Tell us about your goals..."></textarea>
+                    </div>
+                    <button type="button" class="w-full py-4 rounded-xl bg-gradient-to-r from-accent to-neon text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all transform hover:-translate-y-1">
+                        Get Free Consultation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-white/5 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-md bg-gradient-to-br from-accent to-neon flex items-center justify-center text-white font-bold text-sm">
+                            A
+                        </div>
+                        <span class="font-heading font-bold text-xl text-white">Apex Media</span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-sm mb-6">
+                        Your premier partner for digital growth. We specialize in Meta Ads, Facebook Marketing, and building scalable sales funnels for ambitious brands.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-accent transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-accent transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-accent transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#home" class="hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-accent transition-colors">Services</a></li>
+                        <li><a href="#about" class="hover:text-accent transition-colors">Why Us</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-1 text-accent"></i>
+                            <span>hello@apexmedia.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-1 text-accent"></i>
+                            <span>+94 77 123 4567</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
+                            <span>Colombo, Sri Lanka</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-600 text-sm">© 2026 Apex Media. All rights reserved.</p>
+                <div class="flex gap-4 text-sm text-slate-600">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
